@@ -1,39 +1,40 @@
-let width = 20
-let height = 20
-const minWidth = 20;
- const maxWidth = 40;
- const minHeight = 20
- const maxHeight = 40
-let gettingLarger = true;
-let gettingHigher = true;
+let largeur = 20
+ let haiteur = 20
+ const minLargeur = 20;
+  const maxLargeur = 40;
+  const minHauteur = 20
+  const maxHauteur = 40
+ let gettingLarger = true;
+ let gettingHigher = true;
 
-function setup() {
-  createCanvas(1265, 670);
-}
+ function setup() {
+   createCanvas(1265, 670);
+   background(240);
+ }
 
-function draw() {
-  background(240)
-  if (mouseIsPressed) {
-    ellipse(width/2,height/2);
-    fill(35,30,98);
-    
-if(gettingLarger){
-  width = width + 2;    
-}else{
-  width = width - 2;
-if(gettingLarger){
-  height = height + 2;    
-}else{
-  height = height - 2;
-}
+ function draw() {
+     ellipse(20, 20, largeur, hauteur);
+     fill(35,30,98);
+ } 
 
-if(width < minWidth){
-  gettingLarger = true;   
-}else if(width > maxWidth){
-  gettingLarger = false;
-}
-if(height < minHeight){
-  gettingLarger = true;   
-}else if(height > maxHeight){
-  gettingLarger = false;
-} 
+ if(gettingLarger){
+   largeur = largeur + 2;    
+ }else{
+   largeur = largeur - 2;
+ }
+ if(gettingLarger){
+   hauteur = hauteur + 2;    
+ }else{
+  hauteur = hauteur - 2;
+ }
+
+ if(largeur < minLargeur){
+   gettingLarger = true;   
+ }else if(largeur > maxLargeur){
+   gettingLarger = false;
+ }
+ if(hauteur < minHauteur){
+   gettingHigher = true;   
+ }else if(hauteur > maxHauteur){
+   gettingHigher = false;
+ }  
